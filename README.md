@@ -1,14 +1,14 @@
-# 🛡️ SOC Analyst Lab - Laboratoire d'Analyse de Sécurité
+# SOC Analyst Lab - Laboratoire d'Analyse de Sécurité
 
 ![SOC](https://img.shields.io/badge/SOC-Analyst%20Level%201-blue)
 ![Python](https://img.shields.io/badge/Python-3.8+-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## 📋 Description
+## Description
 
-Ce laboratoire personnel est conçu pour pratiquer et démontrer les compétences essentielles d'un **Analyste SOC de Niveau 1**. Il comprend des outils d'analyse de logs, de détection d'incidents, et de réponse aux menaces.
+Ce laboratoire personnel est conçu pour pratiquer et démontrer les compétences essentielles d'un **Analyste SOC**. Il comprend des outils d'analyse de logs, de détection d'incidents, et de réponse aux menaces.
 
-## 🎯 Objectifs du Projet
+## Objectifs du Projet
 
 - Analyser des logs de sécurité (Windows Event Logs, Syslog, Firewall)
 - Détecter des indicateurs de compromission (IoCs)
@@ -38,7 +38,7 @@ soc-analyst-lab/
 └── README.md
 ```
 
-## 🛠️ Outils et Technologies
+## Outils et Technologies
 
 - **Python 3.8+** - Scripts d'automatisation
 - **Pandas** - Analyse de données
@@ -46,7 +46,7 @@ soc-analyst-lab/
 - **YARA** - Détection de malwares
 - **Sigma** - Règles de détection génériques
 
-## 🚀 Installation
+## Installation
 
 ```bash
 # Cloner le repository
@@ -63,7 +63,7 @@ source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-## 📊 Utilisation
+## Utilisation
 
 ### 1. Analyser des logs
 
@@ -86,37 +86,36 @@ python scripts/threat_hunter.py --logs logs/ --rules rules/sigma/
 ### 4. Générer un rapport
 
 ```bash
-python scripts/report_generator.py --incident INC-2024-001 --output reports/
+python scripts/report_generator.py --incident INC-2026-001 --output reports/
 ```
 
-## 📚 Cas Pratiques Inclus
+## Cas Pratiques Inclus
 
 1. **Détection de Brute Force SSH** - Analyse de tentatives de connexion échouées
 2. **Analyse de Phishing** - Extraction d'IoCs depuis des emails suspects
 3. **Détection de Mouvement Latéral** - Identification de comportements suspects
 4. **Investigation de Malware** - Analyse basique d'artefacts
 
-## 🎓 Certifications Associées
+## Certifications Associées
 
+- ✅ Certificate Of Participation Tec4Peace Bootcamp | UNDP | Give1Project | Open Society Foundations
 - ✅ Analyste en Cybersécurité - FORCE-N
 - ✅ Certified Phishing Prevention Specialist (CPPS)
 - ✅ ISO/IEC 27001 Information Security Management
 
-## 📖 Ressources Recommandées
+## Ressources Recommandées
 
 - [MITRE ATT&CK Framework](https://attack.mitre.org/)
 - [Sigma Rules Repository](https://github.com/SigmaHQ/sigma)
 - [SANS Blue Team Wiki](https://wiki.sans.blue/)
 
-## 👤 Auteur
+## Auteur
 
 **Herdy Rostel Youlou**
-- Analyste SOC Niveau 1
-- Certifié FORCE-N Sénégal
-- 📧 Contact: [Votre email]
+- Analyste SOC 
 - 🔗 LinkedIn: [linkedin.com/in/herdy-rostel-youlou](https://www.linkedin.com/in/herdy-rostel-youlou/)
 
-## 📄 Licence
+## Licence
 
 Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 

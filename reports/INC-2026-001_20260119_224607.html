@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapport d'Incident - INC-2024-001</title>
+    <title>🛡️ Rapport d'Incident - INC-2026-001</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -214,13 +214,13 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🛡️ Rapport d'Incident de Sécurité</h1>
+            <h1>Rapport d'Incident de Sécurité</h1>
             <div style="margin: 15px 0;">
                 <span class="severity-badge">High</span>
                 <span class="status-badge">Contained</span>
             </div>
             <div class="meta">
-                <span>📋 ID: INC-2024-001</span>
+                <span>📋 ID: INC-2026-001</span>
                 <span>📅 Créé: 2026-01-19 22:46</span>
                 <span>🔄 Mis à jour: 2026-01-19 22:46</span>
                 <span>👤 Analyste: Herdy Rostel Youlou</span>
@@ -231,7 +231,7 @@
             <h2>📝 Résumé Exécutif</h2>
             <h3>Tentative de Brute Force SSH détectée sur serveur de production</h3>
             <p>
-        Le 15 janvier 2024 à 14h32, le système de monitoring a détecté une série 
+        Le 15 janvier 2026 à 14h32, le système de monitoring a détecté une série 
         de tentatives de connexion SSH échouées provenant de l'adresse IP 185.220.101.42.
         Plus de 500 tentatives ont été enregistrées en l'espace de 10 minutes, 
         ciblant le serveur de production SRV-PROD-01.
@@ -258,14 +258,14 @@
         </div>
         
         <div class="section">
-            <h2>🎯 Techniques MITRE ATT&CK</h2>
+            <h2>Techniques MITRE ATT&CK</h2>
             <div>
                 <span class="mitre-tag">T1110.001 - Brute Force: Password Guessing</span> <span class="mitre-tag">T1078 - Valid Accounts</span>
             </div>
         </div>
         
         <div class="section">
-            <h2>🔍 Indicateurs de Compromission (IoCs)</h2>
+            <h2>Indicateurs de Compromission (IoCs)</h2>
             
         <table class="ioc-table">
             <thead>
@@ -295,21 +295,21 @@
         </div>
         
         <div class="section">
-            <h2>📊 Chronologie de l'Incident</h2>
+            <h2>Chronologie de l'Incident</h2>
             <div class="timeline">
                 
             <div class="timeline-item">
-                <div class="time">2024-01-15 14:32 - Système SIEM</div>
+                <div class="time">2026-01-15 14:32 - Système SIEM</div>
                 <strong>Détection de l'incident</strong>
                 <p>Alerte automatique: seuil de tentatives SSH dépassé</p>
             </div>
             <div class="timeline-item">
-                <div class="time">2024-01-15 14:35 - Auto</div>
+                <div class="time">2026-01-15 14:35 - Auto</div>
                 <strong>Escalade vers l'équipe SOC</strong>
                 <p>Incident assigné à l'analyste de garde</p>
             </div>
             <div class="timeline-item">
-                <div class="time">2024-01-15 14:40 - Herdy Rostel Youlou</div>
+                <div class="time">2026-01-15 14:40 - Herdy Rostel Youlou</div>
                 <strong>Blocage de l'IP source</strong>
                 <p>Ajout de 185.220.101.42 dans la blacklist du firewall</p>
             </div>
@@ -341,7 +341,7 @@
         </div>
         
         <div class="section">
-            <h2>💡 Recommandations</h2>
+            <h2>Recommandations</h2>
             <div class="recommendation">💡 Implémenter l'authentification par clé SSH uniquement</div>
 <div class="recommendation">💡 Déployer une solution de protection contre les brute force (Fail2ban, CrowdSec)</div>
 <div class="recommendation">💡 Considérer l'utilisation d'un bastion/jump host pour l'accès SSH</div>
@@ -349,7 +349,7 @@
         </div>
         
         <div class="section">
-            <h2>📚 Leçons Apprises</h2>
+            <h2>Leçons Apprises</h2>
             <p>
     Cet incident a mis en évidence la nécessité de renforcer la protection du service SSH.
     La détection rapide (moins de 5 minutes) a permis de contenir l'incident efficacement.

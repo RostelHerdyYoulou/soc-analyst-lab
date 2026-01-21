@@ -1,12 +1,12 @@
 {
-  "incident_id": "INC-2024-001",
+  "incident_id": "INC-2026-001",
   "title": "Tentative de Brute Force SSH détectée sur serveur de production",
   "created_at": "2026-01-19 22:46:07.342575",
   "updated_at": "2026-01-19 22:46:07.342581",
   "severity": "IncidentSeverity.HIGH",
   "status": "IncidentStatus.CONTAINED",
   "category": "IncidentCategory.UNAUTHORIZED_ACCESS",
-  "description": "\n        Le 15 janvier 2024 à 14h32, le système de monitoring a détecté une série \n        de tentatives de connexion SSH échouées provenant de l'adresse IP 185.220.101.42.\n        Plus de 500 tentatives ont été enregistrées en l'espace de 10 minutes, \n        ciblant le serveur de production SRV-PROD-01.\n        ",
+  "description": "\n        Le 15 janvier 2026 à 14h32, le système de monitoring a détecté une série \n        de tentatives de connexion SSH échouées provenant de l'adresse IP 185.220.101.42.\n        Plus de 500 tentatives ont été enregistrées en l'espace de 10 minutes, \n        ciblant le serveur de production SRV-PROD-01.\n        ",
   "impact": "Aucune compromission confirmée. Service SSH temporairement ralenti.",
   "affected_systems": [
     "SRV-PROD-01",
@@ -47,9 +47,9 @@
     "Monitoring renforcé pendant 48h"
   ],
   "timeline": [
-    "TimelineEntry(timestamp=datetime.datetime(2024, 1, 15, 14, 32), action=\"Détection de l'incident\", analyst='Système SIEM', details='Alerte automatique: seuil de tentatives SSH dépassé')",
-    "TimelineEntry(timestamp=datetime.datetime(2024, 1, 15, 14, 35), action=\"Escalade vers l'équipe SOC\", analyst='Auto', details=\"Incident assigné à l'analyste de garde\")",
-    "TimelineEntry(timestamp=datetime.datetime(2024, 1, 15, 14, 40), action=\"Blocage de l'IP source\", analyst='Herdy Rostel Youlou', details='Ajout de 185.220.101.42 dans la blacklist du firewall')"
+    "TimelineEntry(timestamp=datetime.datetime(2026, 1, 15, 14, 32), action=\"Détection de l'incident\", analyst='Système SIEM', details='Alerte automatique: seuil de tentatives SSH dépassé')",
+    "TimelineEntry(timestamp=datetime.datetime(2026, 1, 15, 14, 35), action=\"Escalade vers l'équipe SOC\", analyst='Auto', details=\"Incident assigné à l'analyste de garde\")",
+    "TimelineEntry(timestamp=datetime.datetime(2026, 1, 15, 14, 40), action=\"Blocage de l'IP source\", analyst='Herdy Rostel Youlou', details='Ajout de 185.220.101.42 dans la blacklist du firewall')"
   ],
   "artifacts": [],
   "recommendations": [

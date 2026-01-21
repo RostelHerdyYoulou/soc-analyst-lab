@@ -4,7 +4,7 @@ status: experimental
 level: high
 description: Détecte les tentatives de brute force SSH basées sur les échecs de connexion répétés
 author: Herdy Rostel Youlou
-date: 2024/01/15
+date: 2026/01/15
 references:
     - https://attack.mitre.org/techniques/T1110/001/
 tags:
@@ -33,7 +33,7 @@ status: experimental
 level: critical
 description: Détecte les tentatives d'accès à des web shells connus
 author: Herdy Rostel Youlou
-date: 2024/01/15
+date: 2026/01/15
 references:
     - https://attack.mitre.org/techniques/T1505/003/
 tags:
@@ -65,7 +65,7 @@ status: experimental
 level: high
 description: Détecte les tentatives d'injection SQL dans les requêtes HTTP
 author: Herdy Rostel Youlou
-date: 2024/01/15
+date: 2026/01/15
 references:
     - https://attack.mitre.org/techniques/T1190/
 tags:
@@ -97,7 +97,7 @@ status: experimental
 level: high
 description: Détecte les échecs sudo répétés pouvant indiquer une tentative d'escalade de privilèges
 author: Herdy Rostel Youlou
-date: 2024/01/15
+date: 2026/01/15
 references:
     - https://attack.mitre.org/techniques/T1548/
 tags:
@@ -124,7 +124,7 @@ status: experimental
 level: medium
 description: Détecte les connexions vers des ports souvent ciblés par les attaquants
 author: Herdy Rostel Youlou
-date: 2024/01/15
+date: 2026/01/15
 references:
     - https://attack.mitre.org/techniques/T1046/
 tags:

@@ -1,4 +1,4 @@
-# 📚 Guide de l'Analyste SOC - Documentation Complète
+# Guide de l'Analyste SOC - Documentation Complète
 
 ## Table des Matières
 
@@ -378,9 +378,9 @@ Détections à implémenter:
 
 Ce guide fournit les bases pour démarrer en tant qu'analyste SOC. La clé du succès est la pratique continue et l'apprentissage constant. Utilisez ce laboratoire pour développer vos compétences et n'hésitez pas à expérimenter avec les différents outils fournis.
 
-**Bon apprentissage ! 🛡️**
+**Bon apprentissage ! **
 
 ---
 
 *Document créé par Herdy Rostel Youlou*
-*SOC Analyst Lab - 2024*
+*SOC Analyst Lab - 2026*

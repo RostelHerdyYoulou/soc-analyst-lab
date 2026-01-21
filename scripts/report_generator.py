@@ -357,7 +357,7 @@ class ReportGenerator:
 <body>
     <div class="container">
         <div class="header">
-            <h1>🛡️ Rapport d'Incident de Sécurité</h1>
+            <h1>Rapport d'Incident de Sécurité</h1>
             <div style="margin: 15px 0;">
                 <span class="severity-badge">{report.severity.label}</span>
                 <span class="status-badge">{report.status.value}</span>
@@ -396,19 +396,19 @@ class ReportGenerator:
         </div>
         
         <div class="section">
-            <h2>🎯 Techniques MITRE ATT&CK</h2>
+            <h2>Techniques MITRE ATT&CK</h2>
             <div>
                 {' '.join([f'<span class="mitre-tag">{t}</span>' for t in report.mitre_techniques]) or '<p>Aucune technique identifiée</p>'}
             </div>
         </div>
         
         <div class="section">
-            <h2>🔍 Indicateurs de Compromission (IoCs)</h2>
+            <h2>Indicateurs de Compromission (IoCs)</h2>
             {self._generate_ioc_table_html(report.iocs)}
         </div>
         
         <div class="section">
-            <h2>📊 Chronologie de l'Incident</h2>
+            <h2>Chronologie de l'Incident</h2>
             <div class="timeline">
                 {self._generate_timeline_html(report.timeline)}
             </div>
@@ -434,12 +434,12 @@ class ReportGenerator:
         </div>
         
         <div class="section">
-            <h2>💡 Recommandations</h2>
+            <h2>Recommandations</h2>
             {self._generate_recommendations_html(report.recommendations)}
         </div>
         
         <div class="section">
-            <h2>📚 Leçons Apprises</h2>
+            <h2>Leçons Apprises</h2>
             <p>{report.lessons_learned or 'À compléter après clôture de l\'incident.'}</p>
         </div>
         
@@ -515,8 +515,8 @@ class ReportGenerator:
     
     def generate_markdown(self, report: IncidentReport) -> str:
         """Génère le rapport au format Markdown"""
-        
-        md = f"""# 🛡️ Rapport d'Incident de Sécurité
+
+        md = f"""# Rapport d'Incident de Sécurité
 
 ## Informations Générales
 
@@ -548,19 +548,19 @@ class ReportGenerator:
 
 ---
 
-## 🎯 Techniques MITRE ATT&CK
+## Techniques MITRE ATT&CK
 
 {', '.join([f'`{t}`' for t in report.mitre_techniques]) if report.mitre_techniques else '*Aucune technique identifiée*'}
 
 ---
 
-## 🔍 Indicateurs de Compromission (IoCs)
+## Indicateurs de Compromission (IoCs)
 
 {self._generate_ioc_table_md(report.iocs)}
 
 ---
 
-## 📊 Chronologie
+## Chronologie
 
 {self._generate_timeline_md(report.timeline)}
 
@@ -579,13 +579,13 @@ class ReportGenerator:
 
 ---
 
-## 💡 Recommandations
+## Recommandations
 
 {self._generate_recommendations_md(report.recommendations)}
 
 ---
 
-## 📚 Leçons Apprises
+## Leçons Apprises
 
 {report.lessons_learned or '*À compléter après clôture de l\'incident.*'}
 
@@ -661,13 +661,13 @@ class ReportGenerator:
 def create_sample_report() -> IncidentReport:
     """Crée un rapport d'exemple pour démonstration"""
     report = IncidentReport(
-        incident_id="INC-2024-001",
+        incident_id="INC-2026-001",
         title="Tentative de Brute Force SSH détectée sur serveur de production",
         severity=IncidentSeverity.HIGH,
         status=IncidentStatus.CONTAINED,
         category=IncidentCategory.UNAUTHORIZED_ACCESS,
         description="""
-        Le 15 janvier 2024 à 14h32, le système de monitoring a détecté une série 
+        Le 15 janvier 2026 à 14h32, le système de monitoring a détecté une série 
         de tentatives de connexion SSH échouées provenant de l'adresse IP 185.220.101.42.
         Plus de 500 tentatives ont été enregistrées en l'espace de 10 minutes, 
         ciblant le serveur de production SRV-PROD-01.
@@ -689,19 +689,19 @@ def create_sample_report() -> IncidentReport:
     # Ajouter la chronologie
     report.timeline = [
         TimelineEntry(
-            timestamp=datetime(2024, 1, 15, 14, 32),
+            timestamp=datetime(2026, 1, 15, 14, 32),
             action="Détection de l'incident",
             analyst="Système SIEM",
             details="Alerte automatique: seuil de tentatives SSH dépassé"
         ),
         TimelineEntry(
-            timestamp=datetime(2024, 1, 15, 14, 35),
+            timestamp=datetime(2026, 1, 15, 14, 35),
             action="Escalade vers l'équipe SOC",
             analyst="Auto",
             details="Incident assigné à l'analyste de garde"
         ),
         TimelineEntry(
-            timestamp=datetime(2024, 1, 15, 14, 40),
+            timestamp=datetime(2026, 1, 15, 14, 40),
             action="Blocage de l'IP source",
             analyst="Herdy Rostel Youlou",
             details="Ajout de 185.220.101.42 dans la blacklist du firewall"
@@ -750,7 +750,7 @@ def main():
         epilog="""
 Exemples d'utilisation:
   python report_generator.py --demo
-  python report_generator.py --new INC-2024-002 "Alerte Malware"
+  python report_generator.py --new INC-2026-002 "Alerte Malware"
   python report_generator.py --input incident.json --format html
         """
     )
