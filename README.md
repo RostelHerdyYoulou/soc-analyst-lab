@@ -1,6 +1,6 @@
 # SOC Analyst Lab - Laboratoire d'Analyse de Sécurité
 
-!![SOC](https://img.shields.io/badge/SOC-Analyst-blue)
+![SOC](https://img.shields.io/badge/SOC-Analyst-blue)
 ![Python](https://img.shields.io/badge/Python-3.8+-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
