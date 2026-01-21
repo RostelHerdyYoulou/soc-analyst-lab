@@ -1,0 +1,65 @@
+{
+  "incident_id": "INC-2024-001",
+  "title": "Tentative de Brute Force SSH détectée sur serveur de production",
+  "created_at": "2026-01-19 22:46:07.342575",
+  "updated_at": "2026-01-19 22:46:07.342581",
+  "severity": "IncidentSeverity.HIGH",
+  "status": "IncidentStatus.CONTAINED",
+  "category": "IncidentCategory.UNAUTHORIZED_ACCESS",
+  "description": "\n        Le 15 janvier 2024 à 14h32, le système de monitoring a détecté une série \n        de tentatives de connexion SSH échouées provenant de l'adresse IP 185.220.101.42.\n        Plus de 500 tentatives ont été enregistrées en l'espace de 10 minutes, \n        ciblant le serveur de production SRV-PROD-01.\n        ",
+  "impact": "Aucune compromission confirmée. Service SSH temporairement ralenti.",
+  "affected_systems": [
+    "SRV-PROD-01",
+    "192.168.1.100"
+  ],
+  "iocs": [
+    {
+      "value": "185.220.101.42",
+      "type": "ip",
+      "confidence": "HIGH",
+      "context": "Source de l'attaque"
+    },
+    {
+      "value": "192.168.1.100",
+      "type": "ip",
+      "confidence": "HIGH",
+      "context": "Cible de l'attaque"
+    }
+  ],
+  "root_cause": "Service SSH exposé sur Internet sans protection rate-limiting",
+  "attack_vector": "Attaque par force brute sur le service SSH (port 22)",
+  "mitre_techniques": [
+    "T1110.001 - Brute Force: Password Guessing",
+    "T1078 - Valid Accounts"
+  ],
+  "containment_actions": [
+    "Blocage de l'IP 185.220.101.42 au niveau du firewall périmétrique",
+    "Activation du rate-limiting SSH (5 tentatives/minute)",
+    "Notification envoyée à l'équipe infrastructure"
+  ],
+  "eradication_actions": [
+    "Vérification des comptes utilisateurs - aucune compromission",
+    "Rotation des mots de passe des comptes administrateurs",
+    "Mise à jour des règles Fail2ban"
+  ],
+  "recovery_actions": [
+    "Restauration du service SSH normal",
+    "Monitoring renforcé pendant 48h"
+  ],
+  "timeline": [
+    "TimelineEntry(timestamp=datetime.datetime(2024, 1, 15, 14, 32), action=\"Détection de l'incident\", analyst='Système SIEM', details='Alerte automatique: seuil de tentatives SSH dépassé')",
+    "TimelineEntry(timestamp=datetime.datetime(2024, 1, 15, 14, 35), action=\"Escalade vers l'équipe SOC\", analyst='Auto', details=\"Incident assigné à l'analyste de garde\")",
+    "TimelineEntry(timestamp=datetime.datetime(2024, 1, 15, 14, 40), action=\"Blocage de l'IP source\", analyst='Herdy Rostel Youlou', details='Ajout de 185.220.101.42 dans la blacklist du firewall')"
+  ],
+  "artifacts": [],
+  "recommendations": [
+    "Implémenter l'authentification par clé SSH uniquement",
+    "Déployer une solution de protection contre les brute force (Fail2ban, CrowdSec)",
+    "Considérer l'utilisation d'un bastion/jump host pour l'accès SSH",
+    "Activer la journalisation détaillée des connexions SSH"
+  ],
+  "lessons_learned": "\n    Cet incident a mis en évidence la nécessité de renforcer la protection du service SSH.\n    La détection rapide (moins de 5 minutes) a permis de contenir l'incident efficacement.\n    Il est recommandé de revoir la politique d'accès SSH pour tous les serveurs exposés.\n    ",
+  "analyst": "Herdy Rostel Youlou",
+  "reviewer": "",
+  "tags": []
+}
